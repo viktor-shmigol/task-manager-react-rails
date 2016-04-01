@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  expose(:tasks)
+  expose(:tasks) { |default| default.order(created_at: :desc) }
   expose(:task, attributes: :task_params)
 
   def index
@@ -21,6 +21,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit!
+    params.require(:task).permit(:name, :description, :done)
   end
 end

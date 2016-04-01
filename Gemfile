@@ -13,9 +13,15 @@ gem 'decent_exposure'
 gem 'pg'
 gem 'bootstrap-sass'
 gem 'sprockets-coffee-react'
+gem 'underscore-rails'
 
 group :development, :test do
   gem 'byebug'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'rspec-collection_matchers'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
 end
 
 group :development do
@@ -23,3 +29,5 @@ group :development do
   gem 'pry'
   gem 'spring'
 end
+
+gem 'rails_12factor', group: :production

@@ -13,3 +13,11 @@ development:
 test:
   <<: *default
   database: task_manager_test
+
+production:
+  adapter: postgresql
+  database: task_manager_react_prod
+  username: dbpostgres
+  password: postgres
+  pool: 5
+  timeout: 5000
