@@ -1,5 +1,0 @@
-# Task manager reactJs + rails
-# Setup
-rake db:create
-rake db:migrate
-rails s
