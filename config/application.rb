@@ -10,5 +10,11 @@ module TodoReactRails
   class Application < Rails::Application
     config.active_record.raise_in_transactional_callbacks = true
     config.react.addons = true
+    config.middleware.use Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head]
+      end
+    end
   end
 end
